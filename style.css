@@ -10,14 +10,16 @@ body{
     background: red;
   position: relative;
   animation: mymove infinite;
-  animation-duration: 3s;
+  animation-duration: 4s;
   animation-fill-mode: both;
   }
+
+  
   
   @keyframes mymove {
-    0% {left: -50px;top:-20px;}
-    50% {left: 50px;top:-20px;background: rgb(230, 255, 4);}
-    100% {left: -50px;top:-20px;}
+    0% {left: -50px;top:-18px;}
+    50% {left: 50px;text-outline: -18px;;background: rgb(230, 255, 4);}
+    100% {left: -50px;top:-18px;}
   }
 .logo{
     display: flex;
@@ -25,7 +27,7 @@ body{
     align-items: center;
     cursor: pointer;
 }
-.heading{
+#heading{
     color:rgb(255, 255, 255);
     font-weight: bold;
     font-size: 1.5rem;
@@ -38,11 +40,16 @@ body{
     align-items: center;
 }
 .header{
+    position: fixed;
+    top: 0;
     display: flex;
     justify-content: space-between;
     height: 10vh;
     background-color:rgb(0, 0, 0);
-    width: 100%;border-radius: 4px;
+    width: 100%;
+}
+.adjuster{
+    height: 10vh;
 }
 
 .options{
@@ -101,7 +108,18 @@ body{
     background-color: rgb(1, 64, 75);
     border: solid 1px yellow;
     border-radius: 15px;
-}
+    animation: mmm infinite;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+    }
+  
+    
+    
+    @keyframes mmm {
+      0% {border: solid 2px rgb(0, 89, 255);}
+      50% {border: solid 2px yellow;}
+      100% {border: solid 2px rgb(255, 0, 0);}
+    }
 .para{
     width: 80%;
     margin: 3vh auto;
@@ -114,24 +132,69 @@ h2{
     color: white;
 }
 
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: black;
+    height: 40vh;
+    color: blanchedalmond;
+    margin-top: 30vh;
+
+}
+.footerline1{
+    padding: 10px;
+}
+.footerline2{
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+    color: gray;
+    position: relative;
+    bottom: -10vh;
+}
+
 
 @media screen and (max-width:660px){
-    .heading{
+    #heading{
         color:rgb(255, 255, 255);
         font-weight: bold;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         padding-left: 4px;
     }
     .options{
         list-style: none;
         color: blanchedalmond;
-        font-size: 1rem;
+        font-size: 0.8rem;
         display: flex;
         align-items: center;
         justify-content: end;
         margin-right: 0;
     }
+    .menu_item{
+        background-color: rgb(0, 106, 114);
+        height: 100%;
+        display: flex;
+        align-items: center;
+        margin: auto 5px;
+        border-radius: 4px;
+    }
+    .navbar_links{
+        color: blanchedalmond;
+        text-decoration: none;
+        padding: 20px;
+        margin: 2px 2px;
+        font-weight: bold;
+    }
     .container{
         width: 100%;
+    }
+    h2{
+        font-size: 1rem;
+    }
+    h1{
+        font-size: 1.5rem;
     }
 }
