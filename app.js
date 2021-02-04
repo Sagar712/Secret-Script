@@ -22,11 +22,15 @@ function readata(){
     let flip = '';
     //megging flipping mechanism
     for(let i=msg.length-1; i>=0; i--) {
-        if(i==msg.length-1){
-            flip = flip.concat(msg.charAt(i)).toUpperCase(); 
-        }
         flip = flip.concat(msg.charAt(i)).toLowerCase();
     }
 
     document.getElementById("encryted").innerHTML=flip;
+    console.log("Encrypt clicked");
+}
+
+function reset(){
+    document.getElementById("keyy2").value="";
+    document.getElementById("encryted").innerHTML="";
+    console.log("Reset clicked");
 }
