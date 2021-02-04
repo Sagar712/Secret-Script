@@ -256,7 +256,6 @@ h2{
     .container{
         width: 100%;
         overflow: hidden;
-        margin-top: -10%;
     }
     h2{
         font-size: 1rem;
