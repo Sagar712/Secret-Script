@@ -43,7 +43,7 @@ function encrypt(){
 			j= parseInt(key.charAt(looper));
 
             if((msg.charCodeAt(i)+j)>126)
-                exchange = ((msg.charCodeAt(i)+j)%127+32);
+                exchange = ((msg.charCodeAt(i)+j)%127+33);
             else
                 exchange = (msg.charCodeAt(i)+j);
 
@@ -56,7 +56,7 @@ function encrypt(){
         document.getElementById("crypted").innerHTML="Encrypted Message:";
     }
     else
-        alert("Please enter a key");
+        alert("key not entered");
     
 }
 
@@ -69,12 +69,15 @@ function decrypt(){
         let exchange;
 		for(let i=0; i<msg.length; i++) {
 			j= parseInt(key.charAt(looper));
-            if((msg.charCodeAt(i)-j)<32)
-                exchange = 127-(32-((msg.charCodeAt(i)-j)));
+            if((msg.charCodeAt(i)-j)<33)
+                exchange = 127-(33-((msg.charCodeAt(i)-j)));
                 
             else
                 exchange = (msg.charCodeAt(i)-j);
             let temp = String.fromCharCode(exchange);
+            if(temp=="~"){
+                temp=" ";
+            }
 			decrypted = decrypted.concat(temp);
 			looper = (looper+1)%len;
 		}
