@@ -10,7 +10,7 @@
     <div class="bodycontainer">
         <div class="header">
             <div class="logo">
-                <span class="heading">Secret Sript</span>
+                <span id="heading" onclick="scriptmath('Hi')">Secret Sript</span>
             </div>
             <ul class="options">
                 <li class="menu_item">
@@ -21,13 +21,48 @@
                 </li>
             </ul>
         </div>
+        <div class="adjuster"></div>
 
 
         <div class="container">
-            <div class="inner">
-                <h1>Main App HERE</h1>
+            <div class="innerap">
+                <button id="buttReset" onclick="reset()">Reset</button>
+                <form onsubmit="return false">
+                    
+                    <br/>
+                    <label for="keyy">Key: </label>
+                     <input type="text" name="key" id="keyy" autocomplete="off"  /><br/><br/>
+                     <label for="keyy2">Msg: </label> <input type="text" name="msg" placeholder="Enter message" id="keyy2" autocomplete="off"/>
+                     <br/><br/>
+                    <button type="submit" id="butt" onclick="encrypt()">Encrypt</button>
+                    <button type="submit" id="butt" onclick="decrypt()">Decrypt</button>
+                    <br/><br/>
+                    <p id="crypted">
+                    
+                    </p>
+                    <br/><br/>
+                    
+                </form>
+                <div id="encryted">
+                    
+                </div>
+                
             </div>
         </div>
     </div>
+
+    <footer class="footer">
+        <div class="footerline1">
+            <div class="footerline1insie">
+                <br/><br/> Instagram <br/><br/>Twitter
+            </div>
+            <div class="footerline1insie">
+                <br/><br/> Support <br/><br/>App Info
+            </div>
+        </div>
+        <div class="footerline2">© Sagar Wankhade</div>
+    </footer>
+
+    <script src="./app.js"></script>
 </body>
 </html>
