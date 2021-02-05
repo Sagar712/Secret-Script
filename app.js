@@ -37,11 +37,17 @@ function encrypt(){
     let msg = document.getElementById("keyy2").value;
     if(key!=""){
         let encypted="";
-		let decrypted="";
 		let j =0, looper=0, len = key.length;
+        let exchange;
 		for(let i=0; i<msg.length; i++) {
 			j= parseInt(key.charAt(looper));
-            let temp = String.fromCharCode((msg.charCodeAt(i)+j));
+
+            if((msg.charCodeAt(i)+j)>126)
+                exchange = ((msg.charCodeAt(i)+j)%127+33);
+            else
+                exchange = (msg.charCodeAt(i)+j);
+
+            let temp = String.fromCharCode(exchange);
 			encypted = encypted.concat(temp);
 			looper = (looper+1)%len;
 		}
@@ -58,19 +64,24 @@ function decrypt(){
     let key = document.getElementById("keyy").value;
     let msg = document.getElementById("keyy2").value;
     if(key!=""){
-        let encypted="";
 		let decrypted="";
 		let j =0, looper=0, len = key.length;
+        let exchange;
 		for(let i=0; i<msg.length; i++) {
 			j= parseInt(key.charAt(looper));
-            let temp = String.fromCharCode((msg.charCodeAt(i)-j));
-			encypted = encypted.concat(temp);
+            if((msg.charCodeAt(i)-j)<33)
+                exchange = 127-(33-((msg.charCodeAt(i)-j)));
+                
+            else
+                exchange = (msg.charCodeAt(i)-j);
+            let temp = String.fromCharCode(exchange);
+			decrypted = decrypted.concat(temp);
 			looper = (looper+1)%len;
 		}
-        console.log("Decrypted: "+encypted);
-        document.getElementById("encryted").innerHTML=encypted;
+        console.log("Decrypted: "+decrypted);
+        document.getElementById("encryted").innerHTML=decrypted;
         document.getElementById("crypted").innerHTML="Decrypted Message:";
     }
     else
-        alert("key not entered");
+        alert("Please enter a key");
 }
