@@ -52,7 +52,6 @@ function encrypt(){
 					exchange = k;
 					break;
 				}
-				console.log(exchange);
 			}
 			let conv = series[((exchange+j)%95)];
 			
@@ -73,25 +72,36 @@ function decrypt(){
     let key = document.getElementById("keyy").value;
     let msg = document.getElementById("keyy2").value;
     if(key!=""){
-		let decrypted="";
+		let encypted="";
 		let j =0, looper=0, len = key.length;
-        let exchange;
+        let exchange=0;
+        let series = [' ','!','"','#','$','%','&','\'','(',')','*','+',',','-','.','/',
+        '0','1','2','3','4','5','6','7','8','9',':',';','<','=','>','?','@',
+        'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z',
+        '[','\\',']','^','_','`','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u',
+        'v','w','x','y','z','{','|','}','~'];
+
 		for(let i=0; i<msg.length; i++) {
 			j= parseInt(key.charAt(looper));
-            if((msg.charCodeAt(i)-j)<33)
-                exchange = 127-(33-((msg.charCodeAt(i)-j)));
-                
-            else
-                exchange = (msg.charCodeAt(i)-j);
-            let temp = String.fromCharCode(exchange);
-            if(temp=="~"){
-                temp=" ";
-            }
-			decrypted = decrypted.concat(temp);
+			for(let k=0; k<series.length; k++) {
+				if(series[k] == msg.charAt(i)) {
+					exchange = k;
+					break;
+				}
+			}
+            let conv;
+			if(exchange-j<0) {
+				conv = series[95+(exchange-j)];
+			}
+			else
+				conv = series[exchange-j];
+			
+			encypted = encypted.concat(conv);
 			looper = (looper+1)%len;
 		}
-        console.log("Decrypted: "+decrypted);
-        document.getElementById("encryted").innerHTML=decrypted;
+
+		console.log("Decrypted: "+encypted);
+        document.getElementById("encryted").innerHTML=encypted;
         document.getElementById("crypted").innerHTML="Decrypted Message:";
     }
     else
