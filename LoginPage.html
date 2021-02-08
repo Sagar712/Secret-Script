@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <title>LogIn</title>
+
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body >
+    <div class="bodycontainer">
+        <div class="header">
+            <div class="logo">
+                <span id="heading" onclick="scriptmath()">Secret Sript</span>
+            </div>
+            <div class="inck">
+                <i class="fas fa-bars" id="changeicon"></i>
+            </div>
+
+            
+            
+            <div class="dropdown">
+                <ul class="options">
+                    <li class="menu_item">
+                        <a href="./index.html" class="navbar_links">Home</a>
+                    </li>
+                    <li class="menu_item">
+                        <a href="./application.html" class="navbar_links">SignUp</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="adjuster"></div>
+
+        <div class="container">
+            <div class="innerap">
+                <span style="font-weight: bold;">Log In<br/><hr/></span>
+                <form onsubmit="return false">
+                    
+                    <br/>
+                    <label for="user">Username: </label>
+                     <input type="text" name="user" id="user" autocomplete="off"  /><br/><br/>
+                     <label for="pass">Password: </label> <input type="password" name="pass" id="pass" autocomplete="off"/>
+                     <br/><br/>
+                    <button type="submit" id="butt" onclick="logincontrol()">log in</button>
+                    <br/><br/>
+                    <p id="outpu">
+                        To use app, First need to login
+                    </p>
+                    <br/><br/>
+                    
+                </form>
+            </div>
+        </div>
+        
+        
+    </div>
+    <footer class="footer">
+        <div class="footerline1">
+            <div class="footerline1insie">
+                <br/><br/> Instagram <br/><br/>Twitter
+            </div>
+            <div class="footerline1insie">
+                <br/><br/> Support <br/><br/>App Info
+            </div>
+        </div>
+        <div class="footerline2">© Sagar Wankhade</div>
+    </footer>
+    
+
+    <script src="./app.js"></script>
+</body>
+</html>
