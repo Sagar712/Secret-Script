@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <title>SecretScript</title>
     <link rel="stylesheet" href="style.css"/>
 </head>
@@ -10,39 +11,63 @@
     <div class="bodycontainer">
         <div class="header">
             <div class="logo">
-                <span class="heading">Secret Sript</span>
+                <span id="heading" onclick="scriptmath()"><i class="fas fa-mask"></i>  Secret Sript</span>
             </div>
-            <ul class="options">
-                <li class="menu_item">
-                    <a href="./application.html" class="navbar_links">App</a>
-                </li>
-                <li class="menu_item">
-                    <a href="./Contact.html" class="navbar_links">Contact</a>
-                </li>
-            </ul>
+            <div class="inck">
+                <i class="fas fa-bars" id="changeicon"></i>
+            </div>
+            
+            <div class="dropdown">
+                <ul class="options">
+                    <li class="menu_item">
+                        <a href="./application.html" class="navbar_links">App</a>
+                    </li>
+                    <li class="menu_item">
+                        <a href="./Contact.html" class="navbar_links">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </div>
+        <div class="adjuster"></div>
 
         
         
         <div class="container">
             <div class="inner">
-                <h1>Disclaimer</h1>
+                <h1>Namaste</h1>
                 
             </div>
             <div class="anim"></div>
             <div class="inner">
-                <div class="para">I am seeing a dream of creating an App which can encode any password, message or secret chat and
-                    can be decoded by only you. You dont need to remeber every password but you should have encrypted code 
-                    somewhere(which is anyways not readable).
-                   <br/><br/> The main motive behind creating this app 
-                    is to create encoded message of your code with your given key. This is an Open source
-                     project and feel free to add your ideas. This key is X digit number which can be used as encode
-                      as well as decode.
-                     <br/><br/> If you want to join me then visit contact section.</div>
+                <div class="para">Namaste from Sagar. I have developed this App which can encode any password, message or secret chat and
+                    can be decoded only by you. With just a key (your favourite number) you can covert normal message to encrypted script
+                    (not readable) 
+                    and bring it back with the same key.<br/> The main motive behind creating this app 
+                    is to solve problem of remembering all username and passwords which get mixed up in our minds. It is too risky to use storage apps
+                    as Notes and Locker apps are getting hacked any time these days I needed to do this.
+                   <br/><br/>  How to ENCRYPT:-
+                     <br/><br/> From menu select app. You need to give 2 inputs. 1'st is key and 2'nd is msg you want to encrypt.
+                     Press ENCRYPT to encrpt msg. In ouput you have encrypted form of your message.
+                     <br/><br/>  How to DECRYPT:-
+                     <br/><br/> Copy encypted msg to MSG. Give key in KEY section. Now press Decrypt. You got your msg back!!
+                    </div>
             </div>
             
         </div>
     </div>
+    <footer class="footer">
+        <div class="footerline1">
+            <div class="footerline1insie">
+                <br/><br/> Facebook<br/><br/>Instagram<br/><br/>Twitter
+            </div>
+            <div class="footerline1insie">
+                <br/><br/> Support <br/><br/>App Info<br/><br/>Privacy
+            </div>
+        </div>
+        <div class="footerline2">© Sagar Wankhade</div>
+    </footer>
+    
+    <script src="./app.js"></script>
     
 </body>
 </html>
