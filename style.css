@@ -81,7 +81,7 @@ body{
 }
 
 .navbar_links{
-    color: blanchedalmond;
+    color: rgb(100, 255, 208);
     text-decoration: none;
     padding: 10px;
     font-weight: bold;
@@ -112,7 +112,7 @@ body{
     width: 100%;
     text-align: center;
     padding: 10vh;
-    color: blanchedalmond;
+    color: #fff;
 }
 
 .inner{
@@ -163,7 +163,7 @@ body{
     border-radius: 4px;
 }
 .fas{
-    color: blanchedalmond;
+    color: #fff;
 }
 
 
@@ -219,7 +219,7 @@ body{
 }
 h2{
     padding: 2rem;
-    color: white;
+    color: #fff;
 }
 
 .footer{
@@ -230,7 +230,7 @@ h2{
     width: auto;
     background-color: black;
     height: 40vh;
-    color: blanchedalmond;
+    color: #fff;
     margin-top: 30vh;
     margin-left: -8px;
     margin-right: -8px;
@@ -263,7 +263,7 @@ h2{
 .inck{
     display: none;
     height: 100%;
-    color: blanchedalmond;
+    color: #fff;
     font-size: 1.3rem;
 }
 
@@ -285,7 +285,7 @@ h2{
     }
     .options{
         list-style: none;
-        color: blanchedalmond;
+        color: #fff;
         font-size: 0.8rem;
         display: flex;
         flex-direction: column;
@@ -309,7 +309,7 @@ h2{
         margin-top: 2.5vh;
     }
     .navbar_links{
-        color: blanchedalmond;
+        color: rgb(100, 255, 208);
         text-decoration: none;
         padding: 20px;
         margin: 2px 2px;
@@ -355,7 +355,7 @@ h2{
         margin-right: -8px;
         margin-bottom: -5px;
         overflow: hidden;
-        color: blanchedalmond;
+        color: #fff;
     }
     
 
