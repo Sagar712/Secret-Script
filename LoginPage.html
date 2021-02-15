@@ -2,19 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <title>LogIn</title>
+
     <link rel="stylesheet" href="style.css"/>
-    <title>Main App</title>
-    <script>
-        let logi = sessionStorage.getItem("loginstr");
-        if(logi!="true"){
-            window.location.href = "./LoginPage.html";
-        }
-    
-    </script>
 </head>
-<body>
+<body >
     <div class="bodycontainer">
         <div class="header">
             <div class="logo">
@@ -24,52 +19,44 @@
                 <i class="fas fa-bars" id="changeicon"></i>
             </div>
 
+            
+            
             <div class="dropdown">
                 <ul class="options">
                     <li class="menu_item">
                         <a href="./index.html" class="navbar_links">Home</a>
                     </li>
                     <li class="menu_item">
-                        <a href="./Storage.html" class="navbar_links">Storage</a>
-                    </li>
-                    <li class="menu_item">
-                        <a href="./Contact.html" class="navbar_links">Contact</a>
+                        <a href="./application.html" class="navbar_links">SignUp</a>
                     </li>
                 </ul>
             </div>
         </div>
         <div class="adjuster"></div>
 
-
         <div class="container">
             <div class="innerap">
-                <span style="font-weight: bold;">Encryption App<br/><hr/></span>
-                <br/>
-                <button id="buttReset" onclick="reset()">Reset</button>
+                <span style="font-weight: bold;">Log In<br/><hr/></span>
                 <form onsubmit="return false">
                     
                     <br/>
-                    <label for="keyy"><i class="fas fa-key"></i> </label>
-                     <input type="text" name="key" id="keyy" placeholder="enter key" autocomplete="off"  /><br/><br/>
-                     <label for="keyy2"><i class="fas fa-comment-alt"></i> </label> <input type="text" name="msg" placeholder="enter message" id="keyy2" autocomplete="off"/>
+                    <label for="user"> <i class="fas fa-user"></i> </label>
+                     <input type="text" name="user" id="user" autocomplete="off"  /><br/><br/>
+                     <label for="pass"><i class="fas fa-lock"></i> </label> <input type="password" name="pass" id="pass" autocomplete="off"/>
                      <br/><br/>
-                    <button type="submit" id="butt" onclick="encrypt()">Encrypt</button>
-                    <button type="submit" id="butt" onclick="decrypt()">Decrypt</button>
+                    <button type="submit" id="butt" onclick="logincontrol()">Log in</button>
                     <br/><br/>
-                    <p id="crypted">
-                    
+                    <p id="outpu">
+                        To use app, First need to login
                     </p>
                     <br/><br/>
                     
                 </form>
-                <p id="encryted">
-                    
-                </p>
-                
             </div>
         </div>
+        
+        
     </div>
-
     <footer class="footer">
         <div class="footerline1">
             <div class="footerline1insie">
@@ -81,6 +68,7 @@
         </div>
         <div class="footerline2">© Sagar Wankhade</div>
     </footer>
+    
 
     <script src="./app.js"></script>
 </body>

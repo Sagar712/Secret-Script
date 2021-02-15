@@ -78,7 +78,7 @@ body{
     justify-content: center;
     margin: auto 10px;
     border-radius: 4px;
-    margin-top: -2px;
+    margin-top: -3px;
     width: 6rem;
     border: 1px solid rgb(3, 123, 145);
 }
@@ -273,6 +273,78 @@ h2{
 }
 
 
+.storage{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+.allbtns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#outp{
+    width: 97.6%;
+    min-height: 2rem;
+    border:1px solid rgb(3, 49, 49);
+    overflow: hidden;
+    word-wrap: normal;
+    padding: 8px;
+    text-align: justify;
+}
+#outpara{
+    word-wrap: break-word;
+}
+.container1{
+    margin-top: 15vh;
+    border-radius: 15px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(177, 201, 189);
+}
+.heaader{
+    height: 3rem;
+    background-color: rgb(3, 49, 49);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: rgb(252, 252, 252);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+#namedata{
+    border: 2px solid rgb(0, 66, 66);
+    outline: none;
+    background-color: rgb(139, 170, 170);
+    margin-bottom: 1rem;
+    height: 2rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+}
+button{
+    height: 2.5rem;
+    width: 9rem;
+    background-color: rgb(0, 77, 77);
+    outline: none;
+    border:none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: rgb(185, 211, 211);
+    margin: 2px;
+    border-radius: 5px;
+}
+
+button:active{
+    background-color: rgb(1, 109, 109);
+}
+
+
+
 
 @media screen and (max-width:960px){
     .header{
@@ -310,8 +382,8 @@ h2{
         margin: 5px 5px;
         border-radius: 4px;
         font-size: 1rem;
-        margin-bottom: 2.5vh;
-        margin-top: 2.5vh;
+        margin-bottom: 1vh;
+        margin-top: 1vh;
     }
     .navbar_links{
         color: rgb(100, 255, 208);
@@ -323,6 +395,10 @@ h2{
     .container{
         width: 100%;
         overflow: hidden;
+    }
+    .container1{
+        margin-top: 10vh;
+        width: 100%;
     }
     h2{
         font-size: 1rem;
@@ -362,7 +438,9 @@ h2{
         overflow: hidden;
         color: #fff;
     }
-    
+    #outp{
+        width: 95%;
+    }
 
     .inck{
         display: flex;
